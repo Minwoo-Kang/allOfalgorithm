@@ -4,13 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class bubleSort {
 
-    static void bubleSorting(int []arr){
+    public static void bubleSorting(int []arr){
         int dummy;
         int N = arr.length;
 
