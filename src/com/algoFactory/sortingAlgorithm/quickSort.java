@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-
+//TODO : Re-write quick sort if same value in arr
 public class quickSort {
     static void quickSorting(int[] arr, int left, int right) {
-        int low = left;
+/*        int low = left;
         int high = right;
         int pivot = arr[(right + left) / 2];
         int dummy;
@@ -32,7 +32,7 @@ public class quickSort {
         if(left<low-1)
             quickSorting(arr, left, low - 1);
         if(high+1 < right)
-            quickSorting(arr, high + 1, right);
+            quickSorting(arr, high + 1, right);*/
     }
 
     public static void main(String[] args) throws IOException {
