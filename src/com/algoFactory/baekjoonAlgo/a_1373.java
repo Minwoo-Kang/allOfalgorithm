@@ -14,35 +14,33 @@ public class a_1373 {
         StringBuffer dummy;
         StringBuffer result = new StringBuffer();
 
-        if (Integer.parseInt(sb.toString())==0){
-            System.out.println(0);
-            return;
-        }
+        if (sb.length()==1) {     //short circuit (input == 0 -> print 0 , input ==1 -> print 1
+            System.out.println(sb.toString());
+        } else {
+            int firstLength = sb.length() % 3;      //if '11100' , firstLength == 2 , if '111000' , firstLength == 3
 
+            if (firstLength == 0)
+                firstLength = 3;
 
-        int firstLength = sb.length() % 3;
+            dummy = new StringBuffer(sb.substring(0, firstLength));
 
-        if (firstLength == 0)
-            firstLength = 3;
-
-        dummy = new StringBuffer(sb.substring(0, firstLength));
-
-        for (int i = 0; i < first.length; i++) {
-            if (first[i].equals(dummy.toString())) {
-                result.append(i);
-                break;
-            }
-        }
-
-        for (int i = firstLength; i <= sb.length()-3; i += 3) {
-            dummy = new StringBuffer(sb.substring(i , i+3));
-            for (int j = 0; j < binary.length; j++) {
-                if (binary[j].equals(dummy.toString())) {
-                    result.append(j);
+            for (int i = 0; i < first.length; i++) {
+                if (first[i].equals(dummy.toString())) {
+                    result.append(i);
                     break;
                 }
             }
+
+            for (int i = firstLength; i <= sb.length() - 3; i += 3) {
+                dummy = new StringBuffer(sb.substring(i, i + 3));
+                for (int j = 0; j < binary.length; j++) {
+                    if (binary[j].equals(dummy.toString())) {
+                        result.append(j);
+                        break;
+                    }
+                }
+            }
+            System.out.println(result.toString());
         }
-        System.out.println(result.toString());
     }
 }

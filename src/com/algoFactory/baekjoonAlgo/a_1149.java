@@ -1,4 +1,4 @@
-
+package com.algoFactory.baekjoonAlgo;
 
 import java.util.Scanner;
 
@@ -22,12 +22,12 @@ public class a_1149 {
 			int g = sc.nextInt();
 			int b = sc.nextInt();
 
-			cost[R][i] = r + Math.min(cost[G][i - 1], cost[B][i - 1]); // Àü±îÁö ÆÄ¶û
+			cost[R][i] = r + Math.min(cost[G][i - 1], cost[B][i - 1]); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½
 																		// or
-																		// ÃÊ·ÏÀ» Ä¥
-																		// ÇÑ °ªÁß
-																		// °¡Àå ÀÛÀº
-																		// °ª
+																		// ï¿½Ê·ï¿½ï¿½ï¿½ Ä¥
+																		// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+																		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+																		// ï¿½ï¿½
 			cost[G][i] = g + Math.min(cost[R][i - 1], cost[B][i - 1]);
 			cost[B][i] = b + Math.min(cost[R][i - 1], cost[G][i - 1]);
 		}
