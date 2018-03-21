@@ -1,3 +1,4 @@
+package com.algoFactory.baekjoonAlgo;
 
 
 import java.io.BufferedReader;
@@ -11,7 +12,7 @@ public class a_1912 {
 		int N = Integer.parseInt(br.readLine());
 		int max = -1001;
 		int sum = 0;
-		
+
 		StringTokenizer st = new StringTokenizer(br.readLine()," ");
 		while(st.hasMoreTokens()){
 			sum += Integer.parseInt(st.nextToken());
@@ -31,7 +32,7 @@ public class a_1912 {
 		for(int i =0;i<N;i++){
 			sum += sc.nextInt();
 			if(sum>max)max=sum;
-			if(sum<0)sum=0;	//sum�ʱ�ȭ
+			if(sum<0)sum=0;	//sum�ʱ�ȭ
 		}
 		System.out.println(max);*/
 	}
