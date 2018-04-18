@@ -30,8 +30,8 @@ public class a_14888 {
 
     }
 
-    private static void dfs(int dfs_cnt, int plus_num, int minus_num, int multiple_num, int divide_num, int total) {    //dfs_cnt == index of arr (started from 0)
-        if (dfs_cnt == N){
+    private static void dfs(int depth, int plus_num, int minus_num, int multiple_num, int divide_num, int total) {    //depth == index of arr (started from 0)
+        if (depth == N){
             if (max < total)
                 max = total;
             if (min > total)
@@ -39,13 +39,13 @@ public class a_14888 {
         }
 
         if (plus_num < plus_Num)
-            dfs(dfs_cnt+1,plus_num+1,minus_num,multiple_num,divide_num , total+ numArr[dfs_cnt]);
+            dfs(depth+1,plus_num+1,minus_num,multiple_num,divide_num , total+ numArr[depth]);
         if (minus_num < minus_Num)
-            dfs(dfs_cnt+1,plus_num,minus_num+1,multiple_num,divide_num , total- numArr[dfs_cnt]);
+            dfs(depth+1,plus_num,minus_num+1,multiple_num,divide_num , total- numArr[depth]);
         if (multiple_num < multiple_Num)
-            dfs(dfs_cnt+1,plus_num,minus_num,multiple_num+1,divide_num , total* numArr[dfs_cnt]);
+            dfs(depth+1,plus_num,minus_num,multiple_num+1,divide_num , total* numArr[depth]);
         if (divide_num < divide_Num)
-            dfs(dfs_cnt+1,plus_num,minus_num,multiple_num,divide_num+1 , total/ numArr[dfs_cnt]);
+            dfs(depth+1,plus_num,minus_num,multiple_num,divide_num+1 , total/ numArr[depth]);
 
     }
 }
