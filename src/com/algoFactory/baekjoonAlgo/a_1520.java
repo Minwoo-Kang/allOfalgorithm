@@ -5,8 +5,9 @@ import java.util.StringTokenizer;
 public class a_1520 {
 	static int search(int x,int y,int N,int M,int C[][],int map[][]){
 		if(x==N && y==M) return 1;
-		if(C[x][y]!=-1) return C[x][y];
-        C[x][y] = 0;
+		if(C[x][y]!=-1) return C[x][y]; //-1이 아니면 방문한 곳.
+        C[x][y] = 0;    //첫 방문시 경우의 수 초기화.
+                        // 이 코드를 통해 다음 지역이 방문을 한 것인지 , 아니면 경우의 수가 없는 길인지 알 수 있다.
 		int move_x[] = {0,1,0,-1};
 		int move_y[] = {1,0,-1,0};
 		for(int i=0;i<4;i++){
